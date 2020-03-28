@@ -1,0 +1,14 @@
+prefix=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release
+exec_prefix=${prefix}
+libdir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib
+includedir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.22.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -pthread -lm
+Libs.private: 
+Cflags: -I${includedir}

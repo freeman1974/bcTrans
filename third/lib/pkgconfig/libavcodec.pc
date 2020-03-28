@@ -1,0 +1,14 @@
+prefix=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release
+exec_prefix=${prefix}
+libdir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib
+includedir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: libswresample >= 3.3.100, libavutil >= 56.22.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -pthread -lm -lz -L/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib -lfdk-aac -lmp3lame -lm -L/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib -lspeex -L/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib -lx264 -lpthread -lm
+Libs.private: 
+Cflags: -I${includedir}

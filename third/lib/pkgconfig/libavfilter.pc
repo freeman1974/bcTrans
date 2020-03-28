@@ -1,0 +1,14 @@
+prefix=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release
+exec_prefix=${prefix}
+libdir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib
+includedir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.40.101
+Requires: libswscale >= 5.3.100, libpostproc >= 55.3.100, libavformat >= 58.20.100, libavcodec >= 58.35.100, libswresample >= 3.3.100, libavutil >= 56.22.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -pthread -lm
+Libs.private: 
+Cflags: -I${includedir}

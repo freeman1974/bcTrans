@@ -1,0 +1,14 @@
+prefix=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release
+exec_prefix=${prefix}
+libdir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/lib
+includedir=/root/install/srs-3.0release/trunk/objs/ffmpeg.src/_release/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 5.3.100
+Requires: libavutil >= 56.22.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}
